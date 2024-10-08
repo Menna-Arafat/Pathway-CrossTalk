@@ -36,8 +36,8 @@ library(RColorBrewer)
 Load the crosstalk data and pathway terms/components from Excel files.
 
 ```{r}
-data = read.xlsx("https://github.com/Menna-Arafat/Pathway-CrossTalk/blob/master/data/crosstalk_results_permutation.xlsx", sheet = "crosstalk")
-terms = read.xlsx("https://github.com/Menna-Arafat/Pathway-CrossTalk/blob/master/data/enrichment_top_30_features_factor1_gprofiler.xlsx", sheet = "terms") %>%
+data = read.xlsx("data/crosstalk_results_permutation.xlsx", sheet = "crosstalk")
+terms = read.xlsx("data/crosstalk_results_permutation.xlsx", sheet = "terms") %>%
   column_to_rownames(".id") %>%
   t() %>%
   as.data.frame()
